@@ -6,12 +6,13 @@ logging.basicConfig(level = logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 prompt = '> '
+userName = 'default'
 
 try:
     script = argv[0]
     userName = argv[1]
 except IndexError:
-    userName = 'default'
+    pass
 
 
 def init_conversation():
@@ -50,5 +51,7 @@ def init_conversation():
             print("Incorrect, the correct answer is " + str(expected) + " not "
             + str(ans) + "!")
 
+# The method that is run if this module is executed at the cmd line (kind of
+# like the main method in Java)
 if __name__ == '__main__':
     init_conversation()
