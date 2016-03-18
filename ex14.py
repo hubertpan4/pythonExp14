@@ -2,7 +2,8 @@ from sys import argv
 import random
 import logging
 
-logging.basicConfig(format='%(asctime)s:%(module)s:%(funcName)s:%(lineno)d:%(levelname)s:%(message)s',level = logging.DEBUG)
+logging.basicConfig(format='%(asctime)s:%(module)s:%(funcName)s:%(lineno)d:%(levelname)s:%(message)s'
+,level = logging.ERROR)
 logger = logging.getLogger(__name__)
 logger.debug('hi')
 
