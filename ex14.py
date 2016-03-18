@@ -2,8 +2,9 @@ from sys import argv
 import random
 import logging
 
-logging.basicConfig(level = logging.DEBUG)
+logging.basicConfig(format='%(asctime)s:%(module)s:%(funcName)s:%(lineno)d:%(levelname)s:%(message)s',level = logging.DEBUG)
 logger = logging.getLogger(__name__)
+logger.debug('hi')
 
 prompt = '> '
 userName = 'default'
@@ -42,8 +43,8 @@ def init_conversation():
 
         expected = eval(questionStr)
 
-        print(type(ans))
-        print(type(expected))
+        logger.debug(type(ans))
+        logger.debug(type(expected))
 
         if ans == str(expected):
             print('Correct!')
