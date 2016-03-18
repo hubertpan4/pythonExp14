@@ -39,10 +39,6 @@ def init_conversation():
         print('Question ' + str(i + 1) + ': ' + questionStr)
         ans = input(prompt)
 
-        # if type(ans) == int:
-        #     ans = int(ans)
-        #     logging.warn('ans convert into an int')
-
         expected = eval(questionStr)
 
         print(type(ans))
